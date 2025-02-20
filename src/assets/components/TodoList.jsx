@@ -4,13 +4,11 @@ const TodoList = () => {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState('');
 
-  // Load Todos from Local Storage on Mount
   useEffect(() => {
     const savedTodos = JSON.parse(localStorage.getItem('todos')) || [];
-    setTodos(savedTodos);
+    setTodos(savedTodos); 
   }, []);
 
-  // Save Todos to Local Storage on Change
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
