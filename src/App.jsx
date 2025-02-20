@@ -3,7 +3,7 @@ import TodoList from './TodoList';
 
 function App() {
   return (
-    <div className="App">
+    <div className="flex justify-center items-center min-h-screen bg-gray-200">
       <TodoList />
     </div>
   );
